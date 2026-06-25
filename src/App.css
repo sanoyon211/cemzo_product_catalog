@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
   color-scheme: light;
-  /* Premium Light Theme Colors */
   --bg: #f8fafc;
   --surface: #ffffff;
   --surface-soft: #f1f5f9;
   --text: #0f172a;
   --muted: #64748b;
   --border: #e2e8f0;
-  --primary: #1e40af; /* Professional Deep Blue */
+  --primary: #1e40af;
   --primary-dark: #1e3a8a;
   --shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
-  /* Premium Dark Theme Colors */
   --bg: #020617;
   --surface: #0f172a;
   --surface-soft: #1e293b;
@@ -26,6 +26,7 @@
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Global reset and base typography */
 * {
   box-sizing: border-box;
 }
@@ -36,13 +37,12 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
-    Inter,
-    ui-sans-serif,
+    'Plus Jakarta Sans',
     system-ui,
     -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
     sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -51,14 +51,13 @@ select {
   font: inherit;
 }
 
-/* Sharp Borders for Buttons */
 button {
   border: 0;
-  border-radius: 6px; /* Reduced from 12px */
+  border-radius: 6px;
   background: var(--primary);
   color: white;
   cursor: pointer;
-  font-weight: 600; /* Slightly reduced weight for cleaner look */
+  font-weight: 600;
   padding: 0.75rem 1.25rem;
   transition:
     transform 0.2s ease,
@@ -76,6 +75,7 @@ button:disabled {
   opacity: 0.5;
 }
 
+/* App layout */
 .app-shell {
   width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
@@ -104,7 +104,7 @@ h1 {
   font-weight: 800;
   line-height: 1.1;
   margin: 0;
-  letter-spacing: -0.02em; /* Professional typography touch */
+  letter-spacing: -0.03em;
 }
 
 .subtitle {
@@ -118,7 +118,7 @@ h1 {
   white-space: nowrap;
 }
 
-/* Controls - Sharper Corners */
+/* Search and filter controls */
 .controls {
   display: grid;
   grid-template-columns: 1fr 260px auto;
@@ -126,7 +126,7 @@ h1 {
   align-items: end;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px; /* Reduced from 24px */
+  border-radius: 8px;
   box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -143,12 +143,11 @@ h1 {
   font-weight: 600;
 }
 
-/* Inputs - Sharper Corners */
 .field-group input,
 .field-group select {
   width: 100%;
   border: 1px solid var(--border);
-  border-radius: 6px; /* Reduced from 14px */
+  border-radius: 6px;
   background: var(--bg);
   color: var(--text);
   outline: none;
@@ -176,6 +175,7 @@ h1 {
   margin: 0 0 0.75rem;
 }
 
+/* Product listing grid */
 .product-grid,
 .skeleton-grid {
   display: grid;
@@ -183,15 +183,12 @@ h1 {
   gap: 1.5rem;
 }
 
-/* ========================================= */
-/* PREMIUM PRODUCT CARD STYLING              */
-/* ========================================= */
-
+/* Product card and empty/loading states */
 .skeleton-card,
 .state-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px; /* Reduced from 22px */
+  border-radius: 8px;
   box-shadow: var(--shadow);
 }
 
@@ -202,7 +199,7 @@ h1 {
   min-height: 100%;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px; /* Reduced from 22px */
+  border-radius: 8px;
   box-shadow: var(--shadow);
   transition:
     transform 0.2s ease,
@@ -210,7 +207,6 @@ h1 {
     border-color 0.2s ease;
 }
 
-/* Card Hover Effect - Cleaner Lift */
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.15);
@@ -221,7 +217,6 @@ h1 {
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
 }
 
-/* Image Wrap & Zoom Effect */
 .product-image-wrap {
   position: relative;
   display: grid;
@@ -246,17 +241,16 @@ h1 {
 }
 
 .product-card:hover .product-image-wrap img {
-  transform: scale(1.05); /* Subtler zoom */
+  transform: scale(1.05);
 }
 
-/* Category Badge - Professional Square-ish Look */
 .category-pill {
   position: absolute;
   top: 1rem;
   left: 1rem;
   z-index: 10;
   width: fit-content;
-  border-radius: 4px; /* Changed from 999px to a modern badge shape */
+  border-radius: 4px;
   background: var(--surface);
   color: var(--primary);
   font-size: 0.7rem;
@@ -275,7 +269,6 @@ h1 {
   border-color: var(--border);
 }
 
-/* Typography & Spacing */
 .product-body {
   display: flex;
   flex-direction: column;
@@ -297,7 +290,7 @@ h1 {
 }
 
 .price {
-  color: var(--text); /* Dark text for price feels more premium */
+  color: var(--text);
   font-size: 1.25rem;
   font-weight: 800;
   margin: 0;
@@ -325,9 +318,8 @@ h1 {
   font-size: 0.8rem;
 }
 
-/* Premium Button (Bottom Anchor) */
 .product-card > button.view-btn {
-  border-radius: 0 0 8px 8px; /* Sharp corners matched with card */
+  border-radius: 0 0 8px 8px;
   margin-top: 0;
   padding: 0.85rem;
   font-size: 0.9rem;
@@ -345,10 +337,6 @@ h1 {
   color: white;
 }
 
-/* ========================================= */
-/* MODALS, PAGINATION & SKELETONS            */
-/* ========================================= */
-
 .modal-price {
   color: var(--text);
   font-size: 1.5rem;
@@ -356,6 +344,7 @@ h1 {
   margin: 0;
 }
 
+/* Pagination controls */
 .pagination {
   display: flex;
   align-items: center;
@@ -369,6 +358,7 @@ h1 {
   font-weight: 600;
 }
 
+/* Product detail modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -376,7 +366,7 @@ h1 {
   display: grid;
   place-items: center;
   background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(4px); /* Professional modal blur */
+  backdrop-filter: blur(4px);
   padding: 1rem;
 }
 
@@ -386,7 +376,7 @@ h1 {
   max-height: 90vh;
   overflow-y: auto;
   background: var(--surface);
-  border-radius: 12px; /* Sharper modal */
+  border-radius: 12px;
   padding: 1.5rem;
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
@@ -399,7 +389,7 @@ h1 {
   right: 1rem;
   width: 36px;
   height: 36px;
-  border-radius: 6px; /* Square close button */
+  border-radius: 6px;
   padding: 0;
   background: var(--surface-soft);
   color: var(--text);
@@ -422,7 +412,7 @@ h1 {
   max-height: 400px;
   object-fit: contain;
   background: var(--surface-soft);
-  border-radius: 8px; /* Sharper image container */
+  border-radius: 8px;
   padding: 1.5rem;
 }
 
@@ -435,6 +425,7 @@ h1 {
   padding: 1rem;
 }
 
+/* Loading skeleton animation */
 .skeleton-image,
 .skeleton-line {
   background: linear-gradient(
@@ -449,7 +440,7 @@ h1 {
 
 .skeleton-image {
   height: 200px;
-  border-radius: 6px; /* Sharper skeleton */
+  border-radius: 6px;
 }
 .skeleton-line {
   height: 12px;
@@ -472,6 +463,7 @@ h1 {
   }
 }
 
+/* Responsive adjustments */
 @media (max-width: 760px) {
   .app-shell {
     width: min(100% - 1rem, 1180px);

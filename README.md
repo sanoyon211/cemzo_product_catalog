@@ -7,11 +7,11 @@ pagination, and dark/light theme.
 
 ## Live Demo
 
-- Live URL: https://your-live-link.vercel.app
+- Demo URL: https://cemzo-product-catalog.vercel.app
 
 ## GitHub Repository
 
-- Repository: https://github.com/your-username/cemzo-product-catalog
+- Repository: https://github.com/sanoyon211/cemzo_product_catalog
 
 ## Features
 
@@ -45,15 +45,27 @@ src/
 ├── App.css
 ├── App.jsx
 └── main.jsx
-Run Locally
-git clone https://github.com/your-username/cemzo-product-catalog.git
+```
+
+## Run Locally
+
+```bash
+git clone https://github.com/sanoyon211/cemzo_product_catalog.git
 cd cemzo-product-catalog
 npm install
 npm run dev
-Build
-npm run build
-API Used
-https://fakestoreapi.com/products
-Author
-Md Sohab Akter Noyon
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## API Used
+
+- https://fakestoreapi.com/products
+
+## Author
+
+- Md Sohab Akter Noyon
