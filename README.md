@@ -1,16 +1,59 @@
-# React + Vite
+# CEMZO Product Catalog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React product catalog built for the CEMZO React Developer Intern
+technical assignment. It fetches products from Fake Store API and supports
+search, category filtering, product details modal, loading/error states,
+pagination, and dark/light theme.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Live URL: https://your-live-link.vercel.app
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Repository: https://github.com/your-username/cemzo-product-catalog
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Product listing with image, title, price, category, and rating
+- Search by product name
+- Category filter dropdown
+- Product details modal
+- Loading skeleton and error state
+- Responsive layout for mobile, tablet, and desktop
+- Debounced search
+- Pagination
+- Dark/light theme
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Fake Store API
+
+## Folder Structure
+
+```txt
+src/
+├── components/
+├── context/
+├── hooks/
+├── services/
+├── utils/
+├── App.css
+├── App.jsx
+└── main.jsx
+Run Locally
+git clone https://github.com/your-username/cemzo-product-catalog.git
+cd cemzo-product-catalog
+npm install
+npm run dev
+Build
+npm run build
+API Used
+https://fakestoreapi.com/products
+Author
+Md Sohab Akter Noyon
+```
